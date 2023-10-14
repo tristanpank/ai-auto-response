@@ -6,10 +6,10 @@ import Phone from './components/Phone';
 function App() {
   return (
     <div className="App h-screen">
-      <Input />
-      <div className='h-3/5'>
-        <Phone />
+      <div className='h-3/5 aspect-[1/2]'>
+        <Phone/>
       </div>
+        
       
     </div>
   );
