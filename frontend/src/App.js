@@ -6,7 +6,7 @@ import Phone from './components/Phone';
 function App() {
   return (
     <div className="App h-screen">
-      <div className='h-3/5 aspect-[1/2]'>
+      <div className='h-[64rem] w-[36rem]'>
         <Phone/>
       </div>
         

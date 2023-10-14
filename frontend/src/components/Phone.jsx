@@ -26,11 +26,11 @@ export default function Phone() {
 
 
     return (
-        <div className = 'bg-white border border-gray-400 rounded-3xl h-full w-full aspect-phone'>
+        <div className = 'bg-white border border-gray-400 rounded-3xl h-full'>
             
             <div className='bg-gray-200 rounded-t-3xl h-1/6 border-b border-gray-300 p-1.5'> 
-                <img src={pfp} alt='Profile Picture' className='h-1/2 m-auto'></img>
-                <div className='mt-1.5'> You </div>
+                <img src={pfp} alt='Profile Picture' className='h-1/2 m-auto mt-[3%]'></img>
+                <div className='mt-3'> You </div>
             </div>
         <div className='bg-white w-[99%] h-4/6 scroll-smooth focus:scroll-auto overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thumb-rounded-full'  >
                 {   

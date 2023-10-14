@@ -4,6 +4,7 @@ import send from '../send.png'
 
 export default function Input({messages, setMessages, setThinking}) {
   const [input, setInput] = useState("");
+  const [context, setContext] = useState([]);
   
   
   async function handleSubmit(e) {
@@ -13,9 +14,11 @@ export default function Input({messages, setMessages, setThinking}) {
       "content": input,
     };
     setThinking(true);
+    //TODO enable context
     const res = await queryAPI(message, []);
+    setContext(res);
     setThinking(false);
-    setMessages([...messages, input, res.content]);
+    setMessages([...messages, input, res[res.length-1].content]);
     console.log(res);
   }
 
