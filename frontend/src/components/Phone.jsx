@@ -1,24 +1,49 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import pfp from '../pfp.png';
+import Input from './Input';
+import typing from '../typing.gif';
 
 export default function Phone() {
-    const messages = ['hello ai', 'wasdf asduifhasd  sdfuihsd sdfiush sdiufh ss up?', "nm, hbu?", 'whats drsfhdfgup?', "nm, hsfdsdfdfbsdfgsdg ssdfgsdfgsdfgdfgs dsdfgsdfgsdfggsdfgs dfgsbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whatasdfnbm asdf asdf asdf 3erg serg g reg rger ger ge rg erge rger g er g erg  erg erg erg qareg sadfg sdfg sdfg s up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?", 'whats up?', "nm, hbu?"]
+    const [messages, setMessages] = useState([]);
+    const [thinking, setThinking] = useState(false);
+    const messagesEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    useEffect(() => {
+        scrollToBottom()
+      }, [messages]);
+    
     function classOf(index) {
-        if (index % 2 == 0) {
-            return 'bg-slate-100 w-max max-w-3/4 ml-5 rounded-xl text-left p-2 my-2 break-normal'
+        if (index % 2 == 1) {
+            return 'bg-gray-200 w-max max-w-3/4 ml-5 rounded-2xl text-left p-2 my-5 break-words'
         } else {
-            return 'bg-blue-500 w-max max-w-3/4 ml-auto mr-5 content-end rounded-xl text-left p-2 my-2 break-normal'
+            return 'bg-blue-500 w-max max-w-3/4 ml-auto mr-5 content-end rounded-2xl text-left p-2 my-5 break-words'
         }
     }
-    return (
-        <div className = 'border border-slate-400 rounded-3xl h-100 h-full aspect-phone'>
-            <div className='bg-slate-100 rounded-t-3xl h-20 border-b border-slate-300'> hel</div>
-            <div className='bg-white h-4/6 scroll-smooth focus:scroll-auto overflow-y-scroll' >
-            {messages.map((message, index) => (
-                <div className={classOf(index)}>{message}</div>
-            ))}
-            
-            </div>
 
+
+    return (
+        <div className = 'bg-white border border-gray-400 rounded-3xl h-full w-full aspect-phone'>
+            
+            <div className='bg-gray-200 rounded-t-3xl h-1/6 border-b border-gray-300 p-1.5'> 
+                <img src={pfp} alt='Profile Picture' className='h-1/2 m-auto'></img>
+                <div className='mt-1.5'> You </div>
+            </div>
+        <div className='bg-white w-[99%] h-4/6 scroll-smooth focus:scroll-auto overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thumb-rounded-full'  >
+                {   
+                    messages.map((message, index) => (
+                        <div className={classOf(index)}>{message}</div>
+                    ))
+                }
+                {
+                    thinking && <img src={typing} className='m-3 h-[50px]'></img>
+                }
+                <div ref={messagesEndRef} />
+            </div>
+            <Input messages={messages} setMessages={setMessages} setThinking={setThinking}/>
         </div>
     )
 }

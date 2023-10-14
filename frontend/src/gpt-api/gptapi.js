@@ -1,30 +1,35 @@
-import OpenAI from "openai";
+import axios from "axios";
 
-const openai = new OpenAI({
-  apiKey: process.env.REACT_APP_API_KEY,
-  dangerouslyAllowBrowser: true,
-});
-
-// const chatCompletion = await openai.chat.completions.create({
-//   messages: [{role: "user", content: "Say hello world"}],
-//   model: "gpt-3.5-turbo",
-// });
-
-// console.log(chatCompletion);
 
 
 async function queryAPI(message, context) {
   try {
-    console.log("test");
+    
+    console.log(context);
     console.log(message);
-    console.log([...context, message]);
-    const chatCompletion = await openai.chat.completions.create({
-      messages: [...context, message],
-      model: "gpt-3.5-turbo",
-    });
-    const resMessage = chatCompletion.choices[0].message;
-    console.log(chatCompletion);
-    return resMessage;
+
+    const config = {
+      method: "post",
+      url: "http://206.189.225.112/gpt",
+      // url: "http://127.0.0.1:8000/gpt/",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      data: JSON.stringify({
+        "context": context,
+        "message": message
+      }),
+    }
+
+    const res = await axios(config);
+
+    console.log(res);
+    const newMessage = res.data.choices[0].message;
+    console.log(newMessage);
+
+    return [...context, message, newMessage];
+
   } catch(err) {
     console.log(err);
     return "Error";
