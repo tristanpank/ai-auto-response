@@ -16,10 +16,10 @@ export default function Input() {
   }
   
   return(
-    <div>
+    <div className="">
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={(e) => setInput(e.target.value)}></input>
-        <button type="submit" onSubmit={handleSubmit}>Submit</button>
+        <button type="submit" onSubmit={handleSubmit} className="font-bold">Submit</button>
       </form>
     </div>
   )
