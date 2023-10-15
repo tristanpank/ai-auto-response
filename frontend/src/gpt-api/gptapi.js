@@ -20,7 +20,8 @@ async function queryAPI(message, context) {
 
     const config = {
       method: "post",
-      url: "http://206.189.225.112/gpt",
+      url: "https://api.runhub.site/gpt",
+      // url: "http://206.189.225.112/gpt",
       // url: "http://127.0.0.1:8000/gpt/",
       headers: {
         "Content-Type": "application/json",
