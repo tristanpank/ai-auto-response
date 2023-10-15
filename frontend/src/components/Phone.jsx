@@ -3,7 +3,7 @@ import pfp from '../pfp.png';
 import Input from './Input';
 import typing from '../typing.gif';
 
-export default function Phone() {
+export default function Phone({context, setContext}) {
     const [messages, setMessages] = useState([]);
     const [thinking, setThinking] = useState(false);
     const messagesEndRef = useRef(null);
@@ -43,7 +43,7 @@ export default function Phone() {
                 }
                 <div ref={messagesEndRef} />
             </div>
-            <Input messages={messages} setMessages={setMessages} setThinking={setThinking}/>
+            <Input messages={messages} setMessages={setMessages} setThinking={setThinking} context={context} setContext={setContext} />
         </div>
     )
 }

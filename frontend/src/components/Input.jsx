@@ -2,9 +2,8 @@ import { useState } from "react";
 import {queryAPI, adjustParameters} from "../gpt-api/gptapi";
 import send from '../send.png'
 
-export default function Input({messages, setMessages, setThinking}) {
+export default function Input({messages, setMessages, setThinking, context, setContext}) {
   const [input, setInput] = useState("");
-  const [context, setContext] = useState(adjustParameters("at a doctor's appointment", "2 hours", []));
   
   
   async function handleSubmit(e) {
