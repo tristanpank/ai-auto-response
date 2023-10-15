@@ -34,7 +34,7 @@ function MainPage({setPage}) {
   return (
     <div id="mainPage" className={`h-[200vh] bg-gradient-to-b from-zinc-950 to-zinc-800 transition-opacity ease-in duration-700 ${faded ? 'opacity-100' : 'opacity-0'} snap-y`}>
       <Header setPage={setPage}/>
-      <div className="h-[100vh] pt-[40vh] snap-center">
+      <div className="h-screen pt-[40vh] snap-center">
         <Quote/>
       </div>
     </div>
@@ -45,12 +45,12 @@ function MainPage({setPage}) {
 export default function FrontPage({setPage, setFirst, first, isVisible}) {
 
   return (
-    <div className="bg-gradient-to-b from-zinc-950 to-zinc-800 h-[100vh]">
+    <div className="bg-gradient-to-b from-zinc-950 to-zinc-900 h-[100vh]">
       {!isVisible && (
         <MainPage setPage={setPage} />
       )}
       {isVisible && first && (
-        <div className="bg-gradient-to-b from-zinc-950 to-zinc-800 text-slate-100 text-8xl grid place-items-center h-screen">
+        <div className="bg-gradient-to-b from-zinc-950 to-zinc-900 text-slate-100 text-8xl grid place-items-center h-screen">
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString('Hello?')
