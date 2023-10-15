@@ -30,7 +30,7 @@ export default function Phone({context, setContext}) {
             
             <div className='bg-gray-200 rounded-t-3xl h-1/6 border-b border-gray-300 p-1.5'> 
                 <img src={pfp} alt='Profile Picture' className='h-1/2 m-auto mt-[3%]'></img>
-                <div className='mt-3 text-center'> You </div>
+                <div className='lg:mt-3 text-center'> You </div>
             </div>
         <div className='bg-white w-[99%] h-4/6 scroll-smooth focus:scroll-auto overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thumb-rounded-full'  >
                 {   

@@ -32,7 +32,7 @@ export default function ContextForm({context, setContext}) {
       <form className="h-[25vh] lg:h-[20vh] mx-[5vw] text-sm lg:mx-0 lg:text-xl flex flex-col justify-center items-center gap-3 mt-0 lg:mt-5" onSubmit={handleSubmit}>
         <div className="flex gap-3">
           <label className="text-white w-[40vw] lg:w-auto">Why are you busy?</label>
-          <input type="text" className="h-[5vh] lvg:h-auto rounded p-1 w-[40vw] lg:w-auto" value={reason} onChange={(e) => setReason(e.target.value)} placeholder={sampleReason}></input>
+          <input type="text" className="h-[5vh] lg:h-auto rounded p-1 w-[40vw] lg:w-auto" value={reason} onChange={(e) => setReason(e.target.value)} placeholder={sampleReason}></input>
         </div>
         <div className="flex gap-3">
           <label className="text-white w-[40vw] lg:w-auto">How long are you busy?</label>
