@@ -10,6 +10,8 @@ function App() {
   const [page, setPage] = useState('FrontPage');
   const [first, setFirst] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
+  const [toggle, setToggle] = useState(false);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     // Set a timer to hide the div after 6 seconds
@@ -21,9 +23,9 @@ function App() {
   }, []);
 
   if (page == 'FrontPage') {
-    return (<FrontPage setPage={setPage} setFirst={setFirst} first={first} isVisible={isVisible} />);
+    return (<FrontPage setPage={setPage} setFirst={setFirst} first={first} isVisible={isVisible} toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>);
   } else if (page == 'TryPage') {
-    return (<TryPage setPage={setPage}/>);
+    return (<TryPage setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>);
   }
     
 }

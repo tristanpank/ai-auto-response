@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 function adjustParameters(reason, duration, context) {
-  let systemMessage = "You are a personal assistant for someone and are receiving text messages for them while they are busy. They are busy because of " + reason + " and will be done in " + duration + " Please answer briefly and try to help them if necessary.";
+let systemMessage = "You are a personal assistant for someone and are receiving text messages for them while they are busy. They are busy because of " + reason + " and will be done in " + duration + " Please answer briefly and try to help them if necessary. Return a response from the perspective of a personal secretary, keeping secret the fact that you are an AI. State something about the person being busy and about being an assistant of the person they intended to message.";
   if (context.length !== 0) {
     context[0].message = systemMessage;
   } else {
