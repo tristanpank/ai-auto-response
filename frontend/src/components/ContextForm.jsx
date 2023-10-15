@@ -4,7 +4,7 @@ import { adjustParameters } from "../gpt-api/gptapi";
 export default function ContextForm({context, setContext}) {
   const [reason, setReason] = useState("");
   const [duration, setDuration] = useState("");
-  const [sampleReason, setSampleReason] = useState("In a meeting");
+  const [sampleReason, setSampleReason] = useState("At a doctor's appointment");
   const [sampleDuration, setSampleDuration] = useState("2 hours")
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
 
