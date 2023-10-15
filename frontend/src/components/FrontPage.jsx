@@ -10,12 +10,12 @@ import ToggleSwitch from "./ToggleSwitch";
 function Quote({toggle, setToggle, counter, setCounter}) {
   return (
     <div>
-      <div className="text-slate-100 text-center h-[50vh] lg:h-[65vh] text-3xl lg:text-8xl">
+      <div className="text-slate-100 text-center font-medium h-[50vh] lg:h-[65vh] text-3xl lg:text-8xl">
         What if AI could respond for you?
         <img className='m-auto mt-[30vh] lg:mt-[40vh] h-10 animate-bounce'src={chevron}></img>
       </div>
       <div className='h-[88vh]'>
-        <div className="text-slate-100 text-7xl font-medium text-center h-0 lg:h-fit collapse lg:visible">Your New Personal Secretary.</div>
+        <div className="text-slate-100 text-7xl font-medium text-center h-0 lg:h-fit collapse lg:visible">Meet Mia, your Mobile Intelligence Assistant.</div>
         <div className='h-[82vh] lg:flex'>
           <div className='font-medium h-[64vh] w-[36vh] m-auto mt-[10vh] ml-[10vw] mr-0'>
             <FauxPhone toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
@@ -50,7 +50,7 @@ function MainPage({page, setPage, toggle, setToggle, counter, setCounter}) {
   return (
     <div id="mainPage" className={`h-[200vh] bg-gradient-to-b from-zinc-950 to-zinc-800 transition-opacity ease-in duration-700 ${faded ? 'opacity-100' : 'opacity-0'} snap-y`}>
       <Header page={page} setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>
-      <div className="h-screen pt-[40vh] snap-center"> 
+      <div className="h-screen pt-[35vh] snap-center"> 
         <Quote toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
       </div>
     </div>
