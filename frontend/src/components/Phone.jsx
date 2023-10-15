@@ -20,7 +20,7 @@ export default function Phone() {
         if (index % 2 == 1) {
             return 'bg-gray-200 w-max max-w-3/4 ml-5 rounded-2xl text-left p-2 my-5 break-words'
         } else {
-            return 'bg-blue-500 w-max max-w-3/4 ml-auto mr-5 content-end rounded-2xl text-left p-2 my-5 break-words'
+            return 'text-white bg-blue-500 w-max max-w-3/4 ml-auto mr-5 content-end rounded-2xl text-left p-2 my-5 break-words'
         }
     }
 

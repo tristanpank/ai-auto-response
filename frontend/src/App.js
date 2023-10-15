@@ -18,7 +18,7 @@ function App() {
     const timeoutId = setTimeout(() => {
       setIsVisible(false);
       setFirst(false);
-    }, 8000);
+    }, 9000);
     return () => clearTimeout(timeoutId);
   }, []);
 

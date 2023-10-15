@@ -6,12 +6,6 @@ import setPage from '../App.js';
 import Header from "./Header.jsx"
 import ToggleSwitch from "./ToggleSwitch";
 
-// Hello?
-// Are you there?
-// What if AI responded for you?
-
-// BG class: className="w-screen h-screen bg-zinc-950"
-
 
 function Quote({toggle, setToggle, counter, setCounter}) {
   return (
@@ -23,7 +17,7 @@ function Quote({toggle, setToggle, counter, setCounter}) {
       <div className='h-[88vh]'>
         <div className="text-slate-100 text-7xl font-medium text-center">Your New Personal Secretary.</div>
         <div className='h-[82vh] flex'>
-          <div className='h-[64vh] w-[36vh] m-auto mt-[10vh] ml-[10vw] mr-0'>
+          <div className='font-medium h-[64vh] w-[36vh] m-auto mt-[10vh] ml-[10vw] mr-0'>
             <FauxPhone toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
           </div>
           <div className='h-full w-[50%] flex'>
@@ -55,7 +49,7 @@ function MainPage({setPage, toggle, setToggle, counter, setCounter}) {
 
   return (
     <div id="mainPage" className={`h-[200vh] bg-gradient-to-b from-zinc-950 to-zinc-800 transition-opacity ease-in duration-700 ${faded ? 'opacity-100' : 'opacity-0'} snap-y`}>
-      <Header setPage={setPage} />
+      <Header setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>
       <div className="h-screen pt-[40vh] snap-center"> 
         <Quote toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
       </div>
@@ -76,15 +70,18 @@ export default function FrontPage({setPage, setFirst, first, isVisible, toggle, 
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString('Hello?')
-                .pauseFor(1000)
+                .pauseFor(800)
                 .deleteAll()
                 .start();
               typewriter.typeString('Are you there?')
-                .pauseFor(1000)
+                .pauseFor(800)
                 .deleteAll()
                 .start();
-              }}
-            />
+              typewriter.typeString('...')
+                .start();
+              }
+            }
+          />
         </div>
       )}
     </div>

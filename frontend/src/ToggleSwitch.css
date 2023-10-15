@@ -39,7 +39,7 @@
 .inner:before { 
   content: "ON"; 
   padding-left: 10px; 
-  background-color: #060; 
+  background-color: rgb(59 130 246); 
   color: #fff; 
 } 
 .inner:after { 
