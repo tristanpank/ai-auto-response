@@ -10,9 +10,9 @@ export default function TryPage({page, setPage, setCounter, setToggle}) {
   return (
       <div className='h-screen bg-gradient-to-b from-zinc-950 to-zinc-900'>
         <Header page={page} setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>
-        <div className="mt-[5%] text-slate-100 text-5xl font-medium text-center">Text yourself, and watch your personal assistant respond for you.</div>
-        <div className="flex">
-          <div className='font-medium h-[64vh] w-[36vh] m-auto mr-[5vw] mt-[10vh]'>
+        <div className="mt-[5%] text-slate-100 text-2xl lg:text-5xl font-medium text-center">Text yourself, and watch your personal assistant respond for you.</div>
+        <div className="lg:flex">
+          <div className='font-medium h-[64vh] w-[36vh] m-auto lg:mr-[5vw] mt-[2vh] lg:mt-[10vh]'>
             <Phone context={context} setContext={setContext} />
           </div>
           <div className='m-auto ml-0'>
