@@ -1,6 +1,16 @@
 import axios from "axios";
 
 
+function adjustParameters(reason, duration, context) {
+  let systemMessage = "You are a personal assistant for someone and are receiving text messages for them while they are busy. They are busy because of " + reason + " and will be done in " + duration + " Please answer briefly and try to help them if necessary.";
+  if (context.length !== 0) {
+    context[0].message = systemMessage;
+  } else {
+    context.push({"role": "system", "content": systemMessage});
+  }
+  return context;
+}
+
 
 async function queryAPI(message, context) {
   try {
@@ -37,3 +47,4 @@ async function queryAPI(message, context) {
 }
 
 export default queryAPI;
+export {adjustParameters, queryAPI};

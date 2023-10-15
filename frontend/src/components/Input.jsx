@@ -1,10 +1,10 @@
 import { useState } from "react";
-import queryAPI from "../gpt-api/gptapi";
+import {queryAPI, adjustParameters} from "../gpt-api/gptapi";
 import send from '../send.png'
 
 export default function Input({messages, setMessages, setThinking}) {
   const [input, setInput] = useState("");
-  const [context, setContext] = useState([]);
+  const [context, setContext] = useState(adjustParameters("at a doctor's appointment", "2 hours", []));
   
   
   async function handleSubmit(e) {
@@ -15,7 +15,7 @@ export default function Input({messages, setMessages, setThinking}) {
     };
     setThinking(true);
     //TODO enable context
-    const res = await queryAPI(message, []);
+    const res = await queryAPI(message, context);
     setContext(res);
     setThinking(false);
     setMessages([...messages, input, res[res.length-1].content]);
