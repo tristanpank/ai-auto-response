@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/ai-auto-response/static/css/main.6b0db92c.css",
-    "main.js": "/ai-auto-response/static/js/main.a1f8b2c2.js",
-    "static/js/787.cda612ba.chunk.js": "/ai-auto-response/static/js/787.cda612ba.chunk.js",
-    "static/media/typing.gif": "/ai-auto-response/static/media/typing.e448529c97c6050e7ecc.gif",
-    "static/media/mia.png": "/ai-auto-response/static/media/mia.e7481317df0f8580f00f.png",
-    "static/media/pfp.png": "/ai-auto-response/static/media/pfp.3a919acef6a287bbb5e8.png",
-    "static/media/send.png": "/ai-auto-response/static/media/send.8731a8ebae60d9df3781.png",
-    "static/media/logo.svg": "/ai-auto-response/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/ai-auto-response/index.html",
-    "main.6b0db92c.css.map": "/ai-auto-response/static/css/main.6b0db92c.css.map",
-    "main.a1f8b2c2.js.map": "/ai-auto-response/static/js/main.a1f8b2c2.js.map",
-    "787.cda612ba.chunk.js.map": "/ai-auto-response/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/mobile-intelligence-assistant/static/css/main.6b0db92c.css",
+    "main.js": "/mobile-intelligence-assistant/static/js/main.c70f2817.js",
+    "static/js/787.cda612ba.chunk.js": "/mobile-intelligence-assistant/static/js/787.cda612ba.chunk.js",
+    "static/media/typing.gif": "/mobile-intelligence-assistant/static/media/typing.e448529c97c6050e7ecc.gif",
+    "static/media/mia.png": "/mobile-intelligence-assistant/static/media/mia.e7481317df0f8580f00f.png",
+    "static/media/pfp.png": "/mobile-intelligence-assistant/static/media/pfp.3a919acef6a287bbb5e8.png",
+    "static/media/send.png": "/mobile-intelligence-assistant/static/media/send.8731a8ebae60d9df3781.png",
+    "static/media/logo.svg": "/mobile-intelligence-assistant/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/mobile-intelligence-assistant/index.html",
+    "main.6b0db92c.css.map": "/mobile-intelligence-assistant/static/css/main.6b0db92c.css.map",
+    "main.c70f2817.js.map": "/mobile-intelligence-assistant/static/js/main.c70f2817.js.map",
+    "787.cda612ba.chunk.js.map": "/mobile-intelligence-assistant/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b0db92c.css",
-    "static/js/main.a1f8b2c2.js"
+    "static/js/main.c70f2817.js"
   ]
 }
