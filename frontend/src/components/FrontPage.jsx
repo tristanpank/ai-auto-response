@@ -17,7 +17,7 @@ function Quote({toggle, setToggle, counter, setCounter}) {
       <div className='h-[88vh]'>
         <div className="text-slate-100 text-7xl font-medium text-center h-0 lg:h-fit collapse lg:visible">Meet Mia, your Mobile Intelligence Assistant.</div>
         <div className='h-[82vh] lg:flex'>
-          <div className='font-medium h-[64vh] w-[36vh] m-auto mt-[10vh] ml-[10vw] mr-0'>
+          <div className='font-medium h-[64vh] w-[36vh] mx-auto mt-[10vh] lg:ml-[10vw] lg:mr-0'>
             <FauxPhone toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
           </div>
           <div className='lg:h-full m-auto lg:m-0 w-[50%] flex'>
