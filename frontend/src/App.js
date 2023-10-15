@@ -23,9 +23,9 @@ function App() {
   }, []);
 
   if (page == 'FrontPage') {
-    return (<FrontPage setPage={setPage} setFirst={setFirst} first={first} isVisible={isVisible} toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>);
+    return (<FrontPage page={page} setPage={setPage} setFirst={setFirst} first={first} isVisible={isVisible} toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>);
   } else if (page == 'TryPage') {
-    return (<TryPage setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>);
+    return (<TryPage page={page} setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>);
   }
     
 }

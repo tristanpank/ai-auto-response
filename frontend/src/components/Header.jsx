@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
 
-export default function Header({setPage, setCounter, setToggle}) {
+
+export default function Header({page, setPage, setCounter, setToggle}) {
 
     const headerClass = "m-5 hover:text-blue-500 transition duration-300"
     function handleClick () {
+      if (page === "FrontPage") {
+        window.location.reload(false);
+      }
       setPage("FrontPage");
       setCounter(0);
       setToggle(false);

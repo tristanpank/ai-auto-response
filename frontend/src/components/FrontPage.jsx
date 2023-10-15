@@ -38,7 +38,7 @@ function Quote({toggle, setToggle, counter, setCounter}) {
 }
 
 
-function MainPage({setPage, toggle, setToggle, counter, setCounter}) {
+function MainPage({page, setPage, toggle, setToggle, counter, setCounter}) {
   const [faded, setFaded] = useState(false)
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function MainPage({setPage, toggle, setToggle, counter, setCounter}) {
 
   return (
     <div id="mainPage" className={`h-[200vh] bg-gradient-to-b from-zinc-950 to-zinc-800 transition-opacity ease-in duration-700 ${faded ? 'opacity-100' : 'opacity-0'} snap-y`}>
-      <Header setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>
+      <Header page={page} setPage={setPage} setCounter={setCounter} setToggle={setToggle}/>
       <div className="h-screen pt-[40vh] snap-center"> 
         <Quote toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
       </div>
@@ -58,12 +58,12 @@ function MainPage({setPage, toggle, setToggle, counter, setCounter}) {
 }
 
 
-export default function FrontPage({setPage, setFirst, first, isVisible, toggle, setToggle, counter, setCounter}) {
+export default function FrontPage({page, setPage, setFirst, first, isVisible, toggle, setToggle, counter, setCounter}) {
 
   return (
     <div className="bg-gradient-to-b from-zinc-950 to-zinc-900 h-[100vh]">
       {!isVisible && (
-        <MainPage setPage={setPage} toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
+        <MainPage page={page} setPage={setPage} toggle={toggle} setToggle={setToggle} counter={counter} setCounter={setCounter}/>
       )}
       {isVisible && first && (
         <div className="bg-gradient-to-b from-zinc-950 to-zinc-900 text-slate-100 text-8xl grid place-items-center h-screen">
