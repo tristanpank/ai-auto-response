@@ -25,8 +25,14 @@ function Quote({toggle, setToggle, counter, setCounter}) {
               <div className="text-slate-100 text-2xl font-medium text-center">See The Difference</div>
               <ToggleSwitch label=' ' toggle={toggle} setToggle={setToggle}/>
             </div>
-            <div className=' mt-[10vh] text-slate-100 text-2xl w-0 collapse lg:w-full lg:visible font-medium text-center'>words explaining concept</div>
-            
+            <div className='flex flex-col pt-[5vh] mt-[10vh] text-slate-100 text-2xl w-0 collapse lg:w-full lg:visible font-medium text-center'>
+              <div>
+                Mia is our design for a new way to receive text messages while you are busy. Rather than sending others a bland text message while you’re in a meeting, at a doctor’s appointment, or even while you’re driving, Mia is there to act as your personal secretary and manage your incoming texts for you.
+              </div>
+              <div className="mt-5">
+                Powered with the technology of OpenAi's Chat GPT-3.5 Turbo API, Mia responds to anyone trying to contact you, informing them of why you’re unavailable and when you will be able to respond.
+              </div>
+            </div>
           </div>
         </div>
         
